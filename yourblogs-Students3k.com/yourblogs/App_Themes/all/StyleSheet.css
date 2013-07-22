@@ -1,0 +1,35 @@
+﻿/*body
+{
+    font-size: 10pt;
+    font-family: verdana;
+    background-color: beige;
+    margin:0px;
+}*/
+body
+{background-color:#F1F1F1;color:#444444;margin:0 auto;position:relative;text-align:center;}
+h1
+{
+    font-weight: bold;
+    font-size: 30pt;
+    color: #ffff66;
+    font-family: arial;
+    letter-spacing: 15pt;
+    background-color: #990033;
+    margin:0px;
+    text-align:center;
+}
+
+h2
+{
+    font-weight: bold;
+    font-size: 18pt;
+    color: #330066;
+    font-family: arial;
+}
+h3
+{
+    font-weight: bold;
+    font-size: 16pt;
+    color: maroon;
+    font-family: verdana;
+}
