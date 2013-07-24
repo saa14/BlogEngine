@@ -44,57 +44,176 @@
 </script>
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
-<head runat="server"><link href="~/App_Themes/all/StyleSheet.css" rel="stylesheet" type="text/css" />
-    <title>Untitled Page</title>
+<head runat="server">
+<link href="~/App_Themes/all/StyleSheet.css" rel="stylesheet" type="text/css" />
+    		<meta charset="utf-8" />
+		<title>Hellllll NO</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="description" content="The premium forum for expressing and contesting opinions." />
+		<meta name="author" content="heh" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="fancy/css/reset.css" />
+		<link rel="stylesheet" href="fancy/css/demo.css" />
+		<!--<link rel="stylesheet" type="text/css" href="fancy/css/prettyPhoto.css" />-->
+<script type="text/javascript" src="fancy/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="fancy/js/jquery.isotope.min.js"></script>
+
+<style>
+nav.primary {
+	width:auto;
+	margin:30px auto;
+	display:table;
+}
+
+nav.primary ul li  {
+	float:left;
+	list-style:none;
+}
+
+nav.primary ul li a {
+	height:39px;
+	display:block;
+	font-size:15px;
+	color:#000;
+	padding:0 10px;
+	text-decoration:none;
+	line-height:39px;
+}
+
+nav.primary li a.selected {
+    border-bottom: 3px solid #ED3131;
+}
+
+.main {
+	padding:0;
+	margin:0;
+	display:block;
+}
+
+.entry {
+	position:relative;
+	float:left;
+	margin:10px;
+	cursor:pointer;
+	width:225px;
+	height:225px;
+	padding:0;
+}
+
+.portfolio { margin:0; }
+
+.magnifier {
+	background:rgba(237,49,49,.7) url(fancy/images/magnifier.png) no-repeat center;
+	position:absolute;
+	top:10px;
+	left:10px;
+	bottom:10px;
+	right:10px;
+	opacity:0;
+	-webkit-transition:all .3s ease-in-out;
+	-moz-transition:all .3s ease-in-out;
+	-ms-transition:all .3s ease-in-out;
+	-o-transition:all .3s ease-in-out;
+	transition:all .3s ease-in-out;
+}
+.video-hover {
+	background:rgba(237,49,49,.7) url(fancy/images/video.png) no-repeat center;
+	position:absolute;
+	top:10px;
+	left:10px;
+	bottom:10px;
+	right:10px;
+	opacity:0;
+	-webkit-transition:all .3s ease-in-out;
+	-moz-transition:all .3s ease-in-out;
+	-ms-transition:all .3s ease-in-out;
+	-o-transition:all .3s ease-in-out;
+	transition:all .3s ease-in-out;
+}
+
+.entry:hover .video-hover,
+.entry:hover .magnifier { opacity:1; }
+
+img {
+	max-width:100%;
+}
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+.isotope,
+.isotope .isotope-item {
+-webkit-transition-duration: 0.8s;
+   -moz-transition-duration: 0.8s;
+        transition-duration: 0.8s;
+}
+
+.isotope {
+-webkit-transition-property: height, width;
+   -moz-transition-property: height, width;
+        transition-property: height, width;
+}
+
+.isotope .isotope-item {
+-webkit-transition-property: -webkit-transform, opacity;
+   -moz-transition-property:    -moz-transform, opacity;
+        transition-property:         transform, opacity;
+}
+
+</style>
 
 </head>
 <body >
     <form id="form1" runat="server">
-    
-    <div CssClass="wrapper" >
-    <h1>
-    BLOG-E</h1>
-        <table width="100%" height="600px">
-        <tr></tr>
-            <tr>
-                <td width="70%" valign="top" style="position: relative; width: auto; height: auto">
-                    <h2>
-                        What is this?<br />
-                    </h2>
-                    This is the place to post your blogs. Blogging is as simple as taking two steps:<br />
-                    <br />
+
+    		<div class="ddn-top clearfix">
+			<span class="left">
+					<strong>Hellllllll NO</strong>
+				</a>
+			</span>
+		</div><!--/ WDT top bar -->
+        
+        
+	<div id="wrapper">
+ 
+		<h1><span>HELLLLLLLL NO</span></h1>
+        
+            <div class="container">
+            <!-- DEMO -->
+                 <nav class="primary clearfix">
                     <ul>
-                        <li>Register as a user for free</li>
-                        <li>Start posting your blogs.</li>
+                        <li><a href="#" class="selected" data-filter=".menu">Main Menu</a></li>
+                        <li><a href="#" data-filter=".registration">Registration</a></li>
+                        <li><a href="#" data-filter=".debates">Hot Debates</a></li>
                     </ul>
-                    <h2>
-                        Recently Posted Blogs</h2>
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="bid,uid"
-                        DataSourceID="SqlDataSource1" Width="80%" CssClass="mGrid" GridLines="None"
-            PagerStyle-CssClass="pgr"
-            AlternatingRowStyle-CssClass="alt" AllowPaging="True">
-                        <Columns>
-                            <asp:BoundField DataField="bid" HeaderText="bid" ReadOnly="True" SortExpression="bid"
-                                Visible="False" />
-                            <asp:BoundField DataField="uid" HeaderText="uid" ReadOnly="True" SortExpression="uid"
-                                Visible="False" />
-                            <asp:HyperLinkField DataNavigateUrlFields="bid" DataNavigateUrlFormatString="all/showblog.aspx?bid={0}"
-                                DataTextField="title" HeaderText="Title" />
-                            <asp:HyperLinkField DataNavigateUrlFields="uid" DataNavigateUrlFormatString="all/showuser.aspx?uid={0}"
-                                DataTextField="fname" HeaderText="Author" />
-                            <asp:BoundField DataField="postedon" HeaderText="postedon" ReadOnly="True" SortExpression="postedon" />
-                        </Columns>
-                    </asp:GridView>
-                    <br />
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
-                        SelectCommand="select  top 5 bid, u.uid,title, fname, postedon = convert( varchar(10), postedon, 3) from blogs b, users u&#13;&#10;where  b.uid = u.uid order by bid desc">
-                    </asp:SqlDataSource>
-                    
-                    <br />
-                    <a href="all/searchblogs.aspx">Search Blogs</a>
-                </td>
-                <td valign="middle" 
-                    style="background-position: center; padding: 10px; border-style: groove; background-color: wheat; position: relative; float: right; clear: right; background-image: url('Images/Colored_crystal_backgrounds.jpg'); background-repeat: repeat; width: 200px;">
+                </nav>
+
+
+		<section class="main">
+			<div class="portfolio">
+				<article class="menu primary">
+					<a href="#" data-filter=".debates" >
+					    <img src="fancy/images/menu/menu_hotDebates.png" alt="" width=300 height=300>
+					    					<span class="magnifier"></span>
+					</a>
+				</article>
+				<article class="menu primary">
+					<a href="#" data-filter=".registration">
+					    <img src="fancy/images/menu/menu_registration.jpg" alt="" width=300 height=300>
+					    					<span class="magnifier"></span>
+					</a>
+				</article>
+
+
+				<article class="entry web debates" style="color:sienna;">
                     <h3>
                         Login</h3>
                     Email Address <br />
@@ -110,18 +229,148 @@
                     <a href="all/forgotpassword.aspx">Forgot Password?</a> 
                     <br />
                     <a class="link" href="all/register.aspx">Register!</a> 
-                    
-                </td>
-            </tr>
-        </table>
-    
-    </div>
-  <div CssClass="push"></div>
-        </div>
-        <div class="footer">
-            <p align="center" 
-                style="color: #00FFFF; font-family: 'Adobe Caslon Pro Bold'; font-size: 20px">Copyright (c) 2013 <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/all/About.aspx">About us</asp:HyperLink></p>
-        </div>
-    </form>
+				</article>
+
+				<article class="entry print debates">
+                    <a data-rel="prettyPhoto" href="fancy/images/portfolio/work3.jpg">
+					<img src="fancy/images/portfolio/work3.jpg" alt="">
+					<span class="magnifier"></span>
+                    </a>
+				</article>
+
+				<article class="entry ill debates">
+                    <a data-rel="prettyPhoto" href="fancy/images/portfolio/work4.jpg">
+					<img src="fancy/images/portfolio/work4.jpg" alt="">
+					<span class="magnifier"></span>
+                    </a>
+				</article>
+
+				<article class="entry video logo registration">
+					<a data-rel="prettyPhoto" href="http://vimeo.com/34266952">
+                    <img src="fancy/images/portfolio/work5.jpg" alt="">
+					<span class="video-hover"></span>
+                    </a>
+				</article>
+
+				<article class="entry web print registration">
+                    <a data-rel="prettyPhoto" href="fancy/images/portfolio/work6.jpg">
+					<img src="fancy/images/portfolio/work6.jpg" alt="">
+					<span class="magnifier"></span>
+                    </a>
+				</article>
+
+				<article class="entry video logo print">
+					<a data-rel="prettyPhoto" href="http://vimeo.com/34266952">
+                    <img src="fancy/images/portfolio/work7.jpg" alt="">
+					<span class="video-hover"></span>
+                    </a>
+				</article>
+
+				<article class="entry ill logo video">
+                    <a data-rel="prettyPhoto" href="fancy/images/portfolio/work2.jpg">
+					<img src="fancy/images/portfolio/work8.jpg" alt="">
+					<span class="magnifier"></span>
+                    </a>
+				</article> 
+                   
+				<article class="entry video logo">
+                    <a data-rel="prettyPhoto" href="fancy/images/portfolio/work9.jpg">
+					<img src="fancy/images/portfolio/work9.jpg" alt="">
+					<span class="magnifier"></span>
+                    </a>
+				</article>
+
+				<article class="entry web print">
+                    <a data-rel="prettyPhoto" href="fancy/images/portfolio/work10.jpg">
+					<img src="fancy/images/portfolio/work10.jpg" alt="">
+					<span class="magnifier"></span>
+                    </a>
+				</article>
+
+				<article class="entry video logo print">
+					<a data-rel="prettyPhoto" href="http://vimeo.com/34266952">
+                    <img src="fancy/images/portfolio/work11.jpg" alt="">
+					<span class="video-hover"></span>
+                    </a>
+				</article>
+
+				<article class="entry ill logo video">
+                    <a data-rel="prettyPhoto" href="fancy/images/portfolio/work12.jpg">
+					<img src="fancy/images/portfolio/work12.jpg" alt="">
+					<span class="magnifier"></span>
+                    </a>
+				</article>  
+
+
+			</div>
+
+		</section>
+            <!-- END DEMO -->
+                <div class="clearfix"></div>
+            </div>
+
+	</div>
+        
+        </form>
+
+<script>
+	var $container = $('.portfolio');
+	$container.isotope({
+		filter: '.menu',
+		animationOptions: {
+			duration: 750,
+			easing: 'linear',
+			queue: false,
+		}
+	});
+
+	$('nav.primary ul a').click(function(){
+		var selector = $(this).attr('data-filter');
+		$container.isotope({
+			filter: selector,
+			animationOptions: {
+				duration: 750,
+				easing: 'linear',
+				queue: false,
+			}
+		});
+	  return false;
+	});
+	$('article.primary a').click(function(){
+		var selector = $(this).attr('data-filter');
+		$container.isotope({
+			filter: selector,
+			animationOptions: {
+				duration: 750,
+				easing: 'linear',
+				queue: false,
+			}
+		});
+		var $this = $(this);
+		  // don't proceed if already selected
+		  if ( $this.hasClass('selected') ) {
+		      return false;
+		  }
+	   $('nav.primary ul').find('.selected').removeClass('selected');
+	   $('nav.primary ul').find( '.'+ $(this).attr('data-filter') ).addClass('selected'); 
+
+	  return false;
+	});
+
+	var $optionSets = $('nav.primary ul'),
+	       $optionLinks = $optionSets.find('a');
+	 
+	       $optionLinks.click(function(){
+	          var $this = $(this);
+		  // don't proceed if already selected
+		  if ( $this.hasClass('selected') ) {
+		      return false;
+		  }
+	   var $optionSet = $this.parents('nav.primary ul');
+	   $optionSet.find('.selected').removeClass('selected');
+	   $this.addClass('selected'); 
+	});
+</script>
+
 </body>
 </html>

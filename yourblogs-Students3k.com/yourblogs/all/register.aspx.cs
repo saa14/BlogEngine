@@ -42,7 +42,7 @@ public partial class register : System.Web.UI.Page
                     hasPhoto = true;
                 }
                 else
-                    throw new Exception("NOOOOOOOOOOO PHOTOOOOOOOOOOOOOOOOOO");
+                    throw new Exception("No PHOTO");
             }
             catch (Exception ex1)
             {
@@ -61,7 +61,7 @@ public partial class register : System.Web.UI.Page
                 Response.Redirect("../login.aspx");
             }
             else
-                throw new Exception("aaaaaaaaaaaaaaaaaaaaaa");
+                throw new Exception("An Exception Occurred");
 
         }
         catch (SqlException ex2)
