@@ -1,0 +1,78 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Web.UI.HtmlControls;
+
+public partial class registration : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        //fname lname email username pwd pwd photo( yes/no ) occupation location
+    }
+
+    protected void bt_register_click(object sender, EventArgs e)
+    {
+        bool hasPhoto = false;
+        SqlConnection con = new SqlConnection(Database.ConnectionString);
+        if( !ValidationSummary1.<IsValid?> )
+        {
+            return;
+        }
+        try
+        {
+            string command = "insert into users (fname,lname,username,pwd,email,location,occupation,photo) values( ";
+            command += tb_fname.Text + ", ";
+            command += tb_lname.Text + ", ";
+            command += tb_username.Text + ", ";
+            command += tb_pwd.Text + ", ";
+            command += tb_email.Text + ", ";
+            command += tb_location.Text + ", ";
+            command += tb_occupation.Text + ", ";
+            try
+            {
+                if (FileUpload1.HasFile)
+                {
+                    String filename = Request.MapPath("photos/" + Session["uid"].ToString() + ".jpg");
+                    FileUpload1.SaveAs(filename);
+                    // update PHOTO column
+                    if (cmd.ExecuteNonQuery() == 1)
+                    {
+                        //lblMsg.Text = "Photo is uploaded successfully!";
+                        hasPhoto = true;
+                    }
+                    //else
+                    //lblMsg.Text = "Sorry! Could not upload photo. Please try again!";
+                }
+            }
+            catch (Exception e)
+            {}
+
+            if (hasPhoto)
+                command += "y ) ";
+            else
+                command == "n ) ";
+
+            con.Open();
+            command.executeNonQuery();
+        }
+        catch (SqlException e)
+        {
+            // ANMTODO: special handling?
+        }
+        catch (Exception ex)
+        {
+            //lblMsg.Text = "Error->" + ex.Message;
+            // TODO: do smthn
+        }
+        finally
+        {
+            con.Close();
+        } 
+
+    }
+}

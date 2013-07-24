@@ -18,8 +18,10 @@
             </asp:TextBox>
             <br /> 
             Text <br />
-            <asp:TextBox ID="textTextBox" runat="server" Text='<%# Bind("text") %>' TextMode ="MultiLine" Rows="10" Columns = "50">
+            
+            <asp:TextBox ID="textTextBox" runat="server" Text='<%# Bind("text") %>' TextMode ="MultiLine" Rows="10" Columns = "60">
             </asp:TextBox>
+              
             <p />
             <asp:Button ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update"
                 Text="Update">

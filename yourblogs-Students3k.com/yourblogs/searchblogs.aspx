@@ -41,6 +41,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
+
     <title>Untitled Page</title>
 </head>
 <body>
@@ -79,7 +80,7 @@
         <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="Search" /> &nbsp; &nbsp; <a href="login.aspx">Go Back</a>
         <br />
         <br />
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" Cellpadding="5" AllowPaging="True" PageSize="5" OnPageIndexChanging="GridView1_PageIndexChanging">
+        <asp:GridView ID="GridView1" CssClass="grid" runat="server" AutoGenerateColumns="False" Width="100%" Cellpadding="5" AllowPaging="True" PageSize="5" OnPageIndexChanging="GridView1_PageIndexChanging">
             <Columns>
                 <asp:HyperLinkField DataNavigateUrlFields="bid" DataNavigateUrlFormatString="showblog.aspx?bid={0}"
                     DataTextField="title" HeaderText="Title" />

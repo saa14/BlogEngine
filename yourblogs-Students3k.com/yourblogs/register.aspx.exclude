@@ -1,0 +1,176 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="register.aspx.cs" Inherits="Default2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+        <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" 
+            oncreateduser="CreateUserWizard1_CreatedUser">
+            <WizardSteps>
+            
+                <asp:CreateUserWizardStep ID="CreateUserWizardStep1" runat="server">
+                    <ContentTemplate>
+                        <table>
+                            <tr>
+                                <td align="center" colspan="2">
+                                    Sign Up for Your New Account</td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">User Name:</asp:Label>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="UserName" runat="server" ontextchanged="UserName_TextChanged"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" 
+                                        ControlToValidate="UserName" ErrorMessage="User Name is required." 
+                                        ToolTip="User Name is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Password:</asp:Label>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" 
+                                        ControlToValidate="Password" ErrorMessage="Password is required." 
+                                        ToolTip="Password is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    <asp:Label ID="ConfirmPasswordLabel" runat="server" 
+                                        AssociatedControlID="ConfirmPassword">Confirm Password:</asp:Label>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="ConfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="ConfirmPasswordRequired" runat="server" 
+                                        ControlToValidate="ConfirmPassword" 
+                                        ErrorMessage="Confirm Password is required." 
+                                        ToolTip="Confirm Password is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    <asp:Label ID="EmailLabel" runat="server" AssociatedControlID="Email">E-mail:</asp:Label>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="Email" runat="server" ontextchanged="Email_TextChanged"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="EmailRequired" runat="server" 
+                                        ControlToValidate="Email" ErrorMessage="E-mail is required." 
+                                        ToolTip="E-mail is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    <asp:Label ID="QuestionLabel" runat="server" AssociatedControlID="Question">Security Question:</asp:Label>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="Question" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="QuestionRequired" runat="server" 
+                                        ControlToValidate="Question" ErrorMessage="Security question is required." 
+                                        ToolTip="Security question is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    <asp:Label ID="AnswerLabel" runat="server" AssociatedControlID="Answer">Security Answer:</asp:Label>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="Answer" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="AnswerRequired" runat="server" 
+                                        ControlToValidate="Answer" ErrorMessage="Security answer is required." 
+                                        ToolTip="Security answer is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" colspan="2">
+                                    <asp:CompareValidator ID="PasswordCompare" runat="server" 
+                                        ControlToCompare="Password" ControlToValidate="ConfirmPassword" 
+                                        Display="Dynamic" 
+                                        ErrorMessage="The Password and Confirmation Password must match." 
+                                        ValidationGroup="CreateUserWizard1"></asp:CompareValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" colspan="2" style="color:Red;">
+                                    <asp:Literal ID="ErrorMessage" runat="server" EnableViewState="False"></asp:Literal>
+                                </td>
+                            </tr>
+                        </table>
+                    </ContentTemplate>
+                </asp:CreateUserWizardStep>
+               
+               
+                <asp:WizardStep ID="CreateUserWizardStep2" runat="server" Title="Personal Info">
+                <table>
+        <tr>
+            <th>Personal Information</th>
+        </tr>
+        <tr>
+            <td>First Name:</td>
+            <td>
+                <asp:TextBox runat="server" ID="Fname" />
+                <asp:RequiredFieldValidator runat="server" ID="RequiredFieldValidator1" ControlToValidate="Fname"
+                     ErrorMessage="First Name is required." />
+            </td>
+        </tr> 
+        <tr>
+            <td>Last Name:</td>
+            <td>
+                <asp:TextBox runat="server" ID="Lname"  />
+                <asp:RequiredFieldValidator runat="server" ID="RequiredFieldValidator2" ControlToValidate="Lname"
+                     ErrorMessage="Last Name is required." />
+            </td>
+        </tr>  
+        <tr>
+            <td>Location:</td>
+            <td>
+                <asp:TextBox runat="server" ID="Loc"  />
+                <asp:RequiredFieldValidator runat="server" ID="RequiredFieldValidator3" ControlToValidate="Loc"
+                     ErrorMessage="Location is required."  />
+            </td>
+        </tr>   
+        <tr>
+            <td>Occupation:</td>
+            <td>
+                <asp:TextBox runat="server" ID="Occ" />
+                <asp:RequiredFieldValidator runat="server" ID="RequiredFieldValidator4" ControlToValidate="Occ"
+                     ErrorMessage="Occupation is required." />
+            </td>
+        </tr>
+    </table>
+                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+         InsertCommand="INSERT INTO [users] ([fname], [lname], [location], [occupation]) VALUES (@fname, @lname, @location, @occupation)">
+        <InsertParameters>
+            <asp:ControlParameter Name="fname" Type="String" ControlID="Fname" />
+            <asp:ControlParameter Name="lname" Type="String" ControlID="Lname"/>
+            <asp:ControlParameter Name="location" Type="String" ControlID="Loc"/>
+            <asp:ControlParameter Name="occupation" Type="String" ControlID="Occ" />
+        </InsertParameters>
+    </asp:SqlDataSource>
+  
+                </asp:WizardStep>
+               
+               
+                <asp:CompleteWizardStep ID="CompleteWizardStep1" runat="server">
+                </asp:CompleteWizardStep>
+                
+            </WizardSteps>
+        </asp:CreateUserWizard>
+    
+    </div>
+ 
+    </form>
+</body>
+</html>

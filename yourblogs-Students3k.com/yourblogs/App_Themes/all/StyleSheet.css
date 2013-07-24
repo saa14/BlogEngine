@@ -1,13 +1,131 @@
-﻿/*body
+﻿body
 {
-    font-size: 10pt;
-    font-family: verdana;
-    background-color: beige;
-    margin:0px;
-}*/
+    background-position: center;
+    font-size: 13pt;
+    font-family: MingLiU-ExtB;
+    background-color: #F5F5DC;
+    margin: auto;
+    position: relative;
+    background-image: url('../../Images/fabric-background.jpg');
+    background-repeat: repeat;
+    color: #FFFFFF;
+    font-weight: bolder;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+p
+{
+    background-position: center;
+    text-align: center;
+    background-image: url('../../Images/img02.jpg');
+    background-repeat: repeat;
+    background-color: #FF0000;
+    font-family: 'Adobe Gothic Std B';
+    color: #00FFFF;
+    font-weight: bold;
+    font-size: large;
+    font-style: oblique;
+}
+.txtbox{
+	background: url('images/user_icon.png') no-repeat scroll right center #FFFFFF;
+	border: 1px solid #DDD;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #888;
+	color: #666;
+	float: left;
+	padding: 5px 27px 5px 10px;
+	width: 165px;
+	outline: none;
+}
+.mGrid { width: 80%; background-color: #fff; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse; }
+    .mGrid td { padding: 2px; border: solid 1px #c1c1c1; color: #717171; }
+    .mGrid th
+{
+    padding: 4px 2px;
+    color: #fff;
+    background: #424242 url('../../Images/grd_head.png') repeat-x top;
+    border-left: solid 1px #525252;
+    font-size: 0.9em;
+}
+.mGrid .alt
+{
+    background: #fcfcfc url('../../Images/grd_alt.png') repeat-x top;
+}
+.mGrid .pgr
+{
+    background: #424242 url('../../Images/grd_pgr.png') repeat-x top;
+}
+    .mGrid .pgr table { margin: 5px 0; }
+    .mGrid .pgr td
+{
+    border-width: 0;
+    padding: 6px;
+    border-left: solid 1px #666;
+    font-weight: bold;
+    color: #fff;
+    line-height: 12px;
+}   
+    .mGrid .pgr a { color: #666; text-decoration: none; }
+    .mGrid .pgr a:hover { color: #000; text-decoration: none; }
+/*
 body
-{background-color:#F1F1F1;color:#444444;margin:0 auto;position:relative;text-align:center;}
+{background-color:#F1F1F1;color:#444444;margin:0 auto;position:relative;text-align:center;}*/
+
+.loginpagediv
+{
+    background-image: url('~/Images/Colored_crystal_backgrounds.jpg');
+    background-repeat: repeat;
+}
 h1
+{
+    font-weight: bold;
+    font-size: 30pt;
+    color: #0000FF;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 15pt;
+    background-color: #FFFFFF;
+    margin: 0px;
+    text-align: center;
+    background-image: url('../../Images/bg01.png');
+}
+
+h2
+{
+    background-position: center;
+    border-color: #FFFFFF;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 22pt;
+    color: #FF0000;
+    font-family: 'Adobe Caslon Pro';
+    background-image: url('../../Images/templatemo_footer.png');
+    background-repeat: no-repeat;
+    text-align: center;
+}
+h3
+{
+    background-position: center;
+    font-weight: bold;
+    font-size: 16pt;
+    color: #FFFFFF;
+    font-family: verdana;
+    background-color: #00CCFF;
+    vertical-align: middle;
+    text-align: center;
+    background-image: url('../../Images/img04.jpg');
+}
+.grid
+{
+      /*background-image: url( 'blueswirly.jpg' ); 
+      background-color: #C6EAFF;
+      font-family: Times New Roman;
+      font-style: italic;
+      font-size: medium;
+      border-style: dotted;
+      text-transform: capitalize;
+}
+h5
 {
     font-weight: bold;
     font-size: 30pt;
@@ -19,17 +137,290 @@ h1
     text-align:center;
 }
 
-h2
-{
-    font-weight: bold;
-    font-size: 18pt;
-    color: #330066;
-    font-family: arial;
+
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+* {
+margin: 0;
 }
-h3
+html, body {
+height: 100%;
+}
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -4em;
+}
+.footer
 {
-    font-weight: bold;
-    font-size: 16pt;
-    color: maroon;
-    font-family: verdana;
+    height: 4em;
+    background-image: url('../../Images/templatemo_footer.png');
+    position: relative;
+}
+ .push {
+height: 4em;
+}
+background: none repeat scroll 0 0 #1B1615;
+display: inline;
+font-size: 15px;
+line-height: 24px;
+padding-left: 5px;
+/*
+ * Color, Border, and Button Rules
+ */
+.contentslider {
+  padding: 0; /* This acts as a border for the content slider */
+  background: none; /* This is the color of said border */
+} 
+.cs_wrapper, .cs_article {
+/*  background-color: none;  Background color for the entries */
+}
+.cs_leftBtn, .cs_rightBtn {
+  width:43px; /* Should be as wide as the button graphic being used */
+  background: none; /* This will probably match the contentslider bg color */
+}
+
+/*
+ * Article styles (font, color, etc.)
+ *
+ * If textResize is set to TRUE, sizing shouldn't need to be touched. However,
+ * depending on the sizes you have defined, additional tweaking may be
+ * required in order to get the text to display properly.
+ */
+
+/*
+ ******************************************************************************
+ * These styles may be affected by the plugin, so avoid changing them if 
+ * it's not absolutely necessary.
+ ******************************************************************************
+ */
+.contentslider {
+  position:relative;
+  display:block;
+  width: 900px;
+  height: 200px;
+  margin:0 auto;
+  overflow:hidden;
+}
+.cs_wrapper {
+  position:relative;
+  display:block;
+  width: 740px;
+  height: 200px;
+	margin: 0 80px;
+  padding: 0;
+  overflow:hidden;
+}
+.cs_slider {
+	position:absolute;
+	width:10000px;
+	height:100%;
+	margin: 0;
+	padding: 0;
+}
+.cs_article {
+  float:left;
+  position:relative;
+  top:0;
+  left:0;
+    width: 740px;
+  display: block;
+  margin: 0 auto;
+}
+
+.cs_article .article_content {
+	  width: 740px;
+	padding: 0;
+
+}
+
+.article_content .left {
+	float: left;
+	width: 400px;
+}
+
+.article_content .right {
+	float: right;
+	width: 300px;
+}
+
+.article_content h2 {
+	margin: 0 0 20px 0;
+	padding: 0;
+	line-height: 20px;
+	color: #000;
+}
+
+.article_content p{
+	color: #000;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.article_content img {
+	width: 298px;
+	height: 180px;
+	border: 1px solid #CCC;
+}
+
+.cs_leftBtn, .cs_rightBtn {
+	position: absolute;
+	top: 70px;
+	padding: 0;
+	z-index: 10000;
+}
+.cs_leftBtn {
+	left : 0px;
+	outline: 0;
+}
+.cs_rightBtn {
+	right : 0px;
+	outline: 0;
+}
+.cs_leftBtn img, .cs_rightBtn img {
+	border: 0;
+	position: relative;
+	margin: 0;
+}
+/*Button
+.button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f0a59e;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f0a59e;
+	box-shadow:inset 0px 1px 0px 0px #f0a59e;
+	background-color:transparent;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #664c4a;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+.button{
+	background:#25A6E1;
+	background:-moz-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#25A6E1),color-stop(100%,#188BC0));
+	background:-webkit-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+	background:-o-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+	background:-ms-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+	background:linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#25A6E1',endColorstr='#188BC0',GradientType=0);
+	padding:8px 13px;
+	color:#fff;
+	font-family:'Helvetica Neue',sans-serif;
+	font-size:17px;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border:1px solid #1A87B9
+}*/
+a
+{background-color: rgba(255,0,64,1);
+   border: solid 2px rgba(0,0,0,1);
+   -webkit-border-radius: 24px;
+      -moz-border-radius: 24px;
+           border-radius: 24px;
+   width: 114px;
+   padding: 3px;
+   display: inline-block;
+   -webkit-transition: all 0.7s ease;
+      -moz-transition: all 0.7s ease;
+           transition: all 0.7s ease;
+   -webkit-transform: scaleX(2px 2px);
+      -moz-transform: scaleX(2px 2px);
+           transform: scaleX(2px 2px);
+   font-size: 19px;
+   line-height: 27px;
+   text-indent: 29px;
+   color: rgba(240,243,245,0.18);
+   text-shadow: 0px 1px 0px rgba(255,252,255,1)
+    
+    
+    
+    }
+.link{
+   background-color: rgba(255,0,64,1);
+   border: solid 2px rgba(0,0,0,1);
+   -webkit-border-radius: 24px;
+      -moz-border-radius: 24px;
+           border-radius: 24px;
+   width: 114px;
+   padding: 3px;
+   display: inline-block;
+   -webkit-transition: all 0.7s ease;
+      -moz-transition: all 0.7s ease;
+           transition: all 0.7s ease;
+   -webkit-transform: scaleX(2px 2px);
+      -moz-transform: scaleX(2px 2px);
+           transform: scaleX(2px 2px);
+   font-size: 19px;
+   line-height: 27px;
+   text-indent: 29px;
+   color: rgba(240,243,245,0.18);
+   text-shadow: 0px 1px 0px rgba(255,252,255,1)
+}
+.nodeLevel1
+{
+    font: 14px Arial,Sans-Serif;
+    border: double 1px gray;
+    background: red url('../../Images/img01.jpg') repeat-x left top;
+    height: 25px;
+    width: 100px;
+    padding-left: 5px;
+} 
+.nodeLevel2
+{
+    font: 12px Arial,Sans-Serif;
+    border: double 1px gray;
+    margin: 0px;
+    padding-left: 10px;
+    background: red url('../../Images/bg01.png') repeat-x left top;
+    height: 25px;
+    width: 100px;
+} 
+.nodeLevel3
+{
+    font: 10px Arial,Sans-Serif;
+    border: double 1px gray;
+    margin: 0px;
+    padding-left: 15px;
+    background: red url('../../Images/img04.jpg') repeat-x left top;
+    height: 25px;
+    width: 100px;
+} 
+div.abcontainer {
+    width: 960px;
+    margin: 0 auto;
+}
+
+div.abprimary {
+    float: left;
+    width: 240px;
+}
+
+div.abcontent {
+    float: left;
+    width: 480px;
+}
+
+div.absecondary {
+    float: left;
+    width: 240px;
+}
+
+div.Abfooter {
+    clear: both;
 }

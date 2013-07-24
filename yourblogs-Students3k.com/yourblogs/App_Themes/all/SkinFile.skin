@@ -12,10 +12,15 @@ Default skin template. The following skins are provided as examples only.
    control skin per control type is allowed in the same theme.
 
 <asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+
 --%>
 
-
-<asp:GridView runat="server">
-    <HeaderStyle ForeColor="white" BackColor="black"/>
-    <RowStyle BorderColor="black"  />
+<asp:GridView runat="server" CssClass="mGrid" GridLines="None"
+            PagerStyle-CssClass="pgr"
+            AlternatingRowStyle-CssClass="alt">
 </asp:GridView>
+<asp:TextBox runat="server" CssClass="txtbox"></asp:TextBox>
+<asp:Button runat="server" CssClass="button">
+</asp:Button>
+<asp:LinkButton runat="server" CssClass="button"></asp:LinkButton>
+<asp:Hyperlink runat="server" CssClass="link"></asp:Hyperlink>

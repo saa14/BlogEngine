@@ -46,7 +46,7 @@
                 <h2><%# Eval("title") %></h2>
                 <h4>Author : <%# Eval("fname")%>  Posted On : <%# Eval("postedon") %></h4>
                 
-                <%# Eval("text") %>
+               <h5><%# Eval("text") %></h5>
             </ItemTemplate>
         </asp:FormView>
     
