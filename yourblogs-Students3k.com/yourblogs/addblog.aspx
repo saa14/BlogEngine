@@ -15,7 +15,7 @@
             cmd.Parameters.Add("@userid", SqlDbType.Int).Value = Session["uid"];
             cmd.Parameters.Add("@title", SqlDbType.VarChar,100).Value = txtTitle.Text;
             cmd.Parameters.Add("@text", SqlDbType.Text).Value = txtText.Text;
-            cmd.Parameters.Add("@tag", SqlDbType.VarChar, 20).Value = DropDownList1.SelectedItem;
+            //cmd.Parameters.Add("@tag", SqlDbType.VarChar, 20).Value = DropDownList1.SelectedItem;
             cmd.ExecuteNonQuery();
             lblMsg.Text = "Blog has been posted successfully! Click <a href=default.aspx>here</a> to continue..";  
         }
@@ -30,9 +30,7 @@
 
     }
 
-    protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
-    {
-    }
+    
 </script>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -41,20 +39,10 @@
     Title<br />
     <asp:TextBox ID="txtTitle" runat="server" Width="498px"></asp:TextBox>
     <br />
-    Category<br />
-    <asp:DropDownList ID="DropDownList1" runat="server" 
-        onselectedindexchanged="DropDownList1_SelectedIndexChanged">
-        <asp:ListItem>-Select Category-</asp:ListItem>
-        <asp:ListItem>C#</asp:ListItem>
-        <asp:ListItem>Entertainment</asp:ListItem>
-        <asp:ListItem>Tech</asp:ListItem>
-    </asp:DropDownList>
-    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
-        ControlToValidate="DropDownList1" ErrorMessage="RequiredField"></asp:RequiredFieldValidator>
     <br />
-    Text<br />
+    Text
+    <br />
     <asp:TextBox ID="txtText" runat="server" Height="140px" TextMode="MultiLine" Width="498px"></asp:TextBox>
-    <br />
     <br />
     <br />
     <asp:Button ID="btnPost" runat="server" OnClick="btnPost_Click" Text="Post Blog" /><br />

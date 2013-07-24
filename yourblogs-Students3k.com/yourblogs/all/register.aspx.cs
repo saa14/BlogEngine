@@ -41,9 +41,13 @@ public partial class register : System.Web.UI.Page
                     fileuploader_photo.SaveAs(filename);
                     hasPhoto = true;
                 }
+                else
+                    throw new Exception("NOOOOOOOOOOO PHOTOOOOOOOOOOOOOOOOOO");
             }
             catch (Exception ex1)
-            {}
+            {
+                throw ex1;
+            }
 
             if (hasPhoto)
                 command += "'y' ) ";
@@ -60,15 +64,14 @@ public partial class register : System.Web.UI.Page
                 throw new Exception("aaaaaaaaaaaaaaaaaaaaaa");
 
         }
-        //catch (SqlException ex2)
-        //{
-        //    // ANMTODO: special handling?
-        //}
+        catch (SqlException ex2)
+        {
+            lb_error.Text = "Please enter another username, this one's already taken";
+        }
         catch (Exception ex3)
         {
-            //lblMsg.Text = "Error->" + ex.Message;
-            // TODO: do smthn
-            throw ex3;
+            //throw ex3;
+            lb_error.Text = ex3.ToString();
         }
         finally
         {

@@ -24,7 +24,7 @@
             </tr>
             <tr>
                 <td >
-                    Last Name   Last Name</td>
+                    Last Name</td>
                     <td>
                 <asp:TextBox 
                         ID="tb_lname" runat="server"></asp:TextBox>

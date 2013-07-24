@@ -1,8 +1,5 @@
 <%@ Page Language="C#"%>
 
-<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
-
-<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
 
 <%@ Import Namespace="System.Data" %>
 <%@ Import Namespace="System.Data.SqlClient" %>
@@ -11,18 +8,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <script runat="server">
-   
-
-	protected void RadTagCloud1_ItemClicked(object sender,EventArgs e)
-    {
-        HttpCookie tag = new HttpCookie("cook");
-        tag["tag"] = RadTagCloud1.DataTextField;
-        tag.Value = RadTagCloud1.DataTextField;
-        tag.Expires = DateTime.Now.AddMinutes(2);
-        Response.Cookies.Add(tag);
-        Response.Redirect("all/Tagsearch.aspx");
-        
-	}
     protected void btnLogin_Click(object sender, EventArgs e)
     {
         SqlConnection con = new SqlConnection(Database.ConnectionString);
@@ -59,28 +44,13 @@
 </script>
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
-<head runat="server">
+<head runat="server"><link href="~/App_Themes/all/StyleSheet.css" rel="stylesheet" type="text/css" />
     <title>Untitled Page</title>
 
 </head>
 <body >
     <form id="form1" runat="server">
-    <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server">
-    </telerik:RadAjaxManager>
-    <telerik:RadScriptManager ID="ScriptManager1" runat="server" 
-        EnableTheming="True">
-        <Scripts>
-            <asp:ScriptReference Assembly="Telerik.Web.UI" 
-                Name="Telerik.Web.UI.Common.Core.js">
-            </asp:ScriptReference>
-            <asp:ScriptReference Assembly="Telerik.Web.UI" 
-                Name="Telerik.Web.UI.Common.jQuery.js">
-            </asp:ScriptReference>
-            <asp:ScriptReference Assembly="Telerik.Web.UI" 
-                Name="Telerik.Web.UI.Common.jQueryInclude.js">
-            </asp:ScriptReference>
-        </Scripts>
-    </telerik:RadScriptManager>
+    
     <div CssClass="wrapper" >
     <h1>
     BLOG-E</h1>
@@ -139,27 +109,14 @@
                     <br />
                     <a href="all/forgotpassword.aspx">Forgot Password?</a> 
                     <br />
-                    <a href="all/register.aspx">Register!</a> 
+                    <a class="link" href="all/register.aspx">Register!</a> 
                     
                 </td>
             </tr>
         </table>
     
     </div>
-    <div><h4>
-    Tag Cloud</h4>
-        <telerik:RadTagCloud ID="RadTagCloud1" runat="server" Height="122px" 
-            onclientitemclicked="RadTagCloud1_ItemClicked" EnableTheming="False" 
-            WordsToExclude="a,about,after,all,also,an,and,are,as,at,be,been,but,by,can,could,did,do,does,each,for,from,get,had,has,have,he,her,him,his,how,i,if,in,into,is,it,its,just,me,more,most,my,not,of,on,or,our,said,see,shall,she,should,so,some,than,that,the,their,there,they,this,those,to,up,used,was,we,were,what,when,which,while,who,why,will,with,would,you,your">
-            <Items>
-                <telerik:RadTagCloudItem NavigateUrl="all/Tagsearch.aspx" Text="Tech" />
-                <telerik:RadTagCloudItem Text="Entertainment" />
-                <telerik:RadTagCloudItem Text="C#" />
-                <telerik:RadTagCloudItem />
-            </Items>
-        </telerik:RadTagCloud>
-    </div>
-       <div CssClass="push"></div>
+  <div CssClass="push"></div>
         </div>
         <div class="footer">
             <p align="center" 
