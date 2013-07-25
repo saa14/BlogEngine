@@ -47,41 +47,51 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title>Untitled Page</title>
+    <style type="text/css">
+        .style1
+        {
+            width: 146px;
+        }
+        .style2
+        {
+            height: 18px;
+            width: 146px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div align="center">
         <h2>
             Search Blogs</h2>
         <table>
             <tr>
-                <td style="width: 100px">
+                <td class="style1">
                     Title :</td>
                 <td>
                     <asp:TextBox ID="txtTitle" runat="server" Width="204px"></asp:TextBox></td>
             </tr>
             <tr>
-                <td style="width: 100px; height: 18px">
+                <td class="style2">
                     Author Name :
                 </td>
                 <td style="height: 18px">
                     <asp:TextBox ID="txtAuthor" runat="server" Width="205px"></asp:TextBox></td>
             </tr>
             <tr>
-                <td style="width: 100px">
+                <td class="style1">
                     From Date :
                 </td>
                 <td>
                     <asp:TextBox ID="txtFromDate" runat="server" Width="86px"></asp:TextBox>
-                    (MM/DD/YY)&nbsp; To Date :
-                    <asp:TextBox ID="txtToDate" runat="server" Width="90px"></asp:TextBox>
+                    (MM/DD/YY) To Date :</td><td> <asp:TextBox ID="txtToDate" runat="server" Width="90px"></asp:TextBox>
                     (MM/DD/YY)</td>
             </tr>
         </table>
     
     </div>
         <br />
-        <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="Search" /> &nbsp; &nbsp; <a href="../login.aspx">Go Back</a>
+        <div align="center"><asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="Search" /> &nbsp; &nbsp; <a href="../login.aspx">Go Back</a></div>
         <br />
         <br />
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="100%" Cellpadding="5" AllowPaging="True" PageSize="5" OnPageIndexChanging="GridView1_PageIndexChanging" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" ForeColor="Black">
@@ -95,5 +105,7 @@
             <HeaderStyle BackColor="#404040" ForeColor="White" />
         </asp:GridView>
     </form>
+    
+
 </body>
 </html>

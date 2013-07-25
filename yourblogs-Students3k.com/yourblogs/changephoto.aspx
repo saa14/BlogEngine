@@ -16,7 +16,7 @@
         SqlConnection con = new SqlConnection(Database.ConnectionString); 
         try
         {
-            String filename = Request.MapPath("photos/" + Session["uid"].ToString() + ".jpg");
+            String filename = Request.MapPath("~/photos/" + Session["uid"].ToString() + ".jpg");
             FileUpload1.SaveAs(filename);
             // update PHOTO column
             con.Open();

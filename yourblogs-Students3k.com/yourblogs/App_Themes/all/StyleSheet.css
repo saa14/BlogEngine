@@ -8,19 +8,17 @@
     position: relative;
     background-image: url('../../Images/dark-wood-panels-1645.jpg');
     background-repeat: repeat;
-    color: #FFFFFF;
+    color: #00CCFF;
     font-weight: bolder;
     font-style: normal;
     font-variant: normal;
     text-transform: none;
+    text-align: center;
 }
 p
 {
     background-position: center;
     text-align: center;
-    background-image: url('../../Images/img02.jpg');
-    background-repeat: repeat;
-    background-color: #FF0000;
     font-family: 'Adobe Gothic Std B';
     color: #00FFFF;
     font-weight: bold;
@@ -77,19 +75,33 @@ body
     background-image: url('~/Images/Colored_crystal_backgrounds.jpg');
     background-repeat: repeat;
 }
+.loginhead
+{
+   
+    font-size: 100px;
+    margin-top: 0;
+    font-family: 'Myriad Pro' , 'Myriad' , helvetica, arial, sans-serif;
+    text-shadow: 2px 3px 3px #292929;
+    letter-spacing: -7px;
+    -webkit-text-stroke: 1px white;
+    right: 500px;
+    left: 500px;
+}
 h1
 {
-    font-weight: bold;
-    font-size: 30pt;
-    color: #0000FF;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 15pt;
-    background-color: #FFFFFF;
-    margin: 0px;
-    text-align: center;
-    background-image: url('../../Images/bg01.png');
-}
+    font-size: 30px;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	text-shadow:rgba(0, 0, 0, .3) 2px 2px 2px;}
+	.glow {
 
+color:#FFFFFF ;
+
+text-shadow:0 0 20px yellow ;
+
+}
+	
 h2
 {
     background-position: center;
@@ -98,13 +110,19 @@ h2
     font-weight: bold;
     font-size: 22pt;
     color: #FF0000;
-    font-family: 'Adobe Caslon Pro';
+    font-family: 'Adobe Fan Heiti Std B';
     background-image: url('../../Images/templatemo_footer.png');
     background-repeat: no-repeat;
     text-align: center;
+    width:auto;
 }
 h3
-{
+{ border: double 1px gray;
+    margin: 0px;
+    padding-left: 10px;
+    background: red url('../../Images/bg01.png') repeat-x left top;
+    height: 25px;
+    width: 100px;
     background-position: center;
     font-weight: bold;
     font-size: 16pt;
@@ -113,17 +131,8 @@ h3
     background-color: #00CCFF;
     vertical-align: middle;
     text-align: center;
-    background-image: url('../../Images/img04.jpg');
-}
-.grid
-{
-      /*background-image: url( 'blueswirly.jpg' ); 
-      background-color: #C6EAFF;
-      font-family: Times New Roman;
-      font-style: italic;
-      font-size: medium;
-      border-style: dotted;
-      text-transform: capitalize;
+    
+    
 }
 h5
 {
@@ -136,6 +145,17 @@ h5
     margin:0px;
     text-align:center;
 }
+/*.grid
+{
+      /*background-image: url( 'blueswirly.jpg' ); 
+      background-color: #C6EAFF;
+      font-family: Times New Roman;
+      font-style: italic;
+      font-size: medium;
+      border-style: dotted;
+      text-transform: capitalize;
+}
+
 
 
 /*
@@ -143,11 +163,14 @@ Design by Free CSS Templates
 http://www.freecsstemplates.org
 Released for free under a Creative Commons Attribution 2.5 License
 */
-* {
+/*{
 margin: 0;
+    width: 186px;
 }
 html, body {
 height: 100%;
+    top: -1px;
+    left: -3px;
 }
 .wrapper {
 min-height: 100%;
@@ -169,6 +192,11 @@ display: inline;
 font-size: 15px;
 line-height: 24px;
 padding-left: 5px;
+background: none repeat scroll 0 0 #1B1615;
+display: inline;
+font-size: 15px;
+line-height: 24px;
+padding-left: 5px;*/
 /*
  * Color, Border, and Button Rules
  */
@@ -308,7 +336,7 @@ padding-left: 5px;
 .button:active {
 	position:relative;
 	top:1px;
-}
+}*/
 .button{
 	background:#25A6E1;
 	background:-moz-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
@@ -326,8 +354,11 @@ padding-left: 5px;
 	-moz-border-radius:4px;
 	-webkit-border-radius:4px;
 	border:1px solid #1A87B9
-}*/
-a
+}
+.button:active {
+	position:relative;
+	top:1px;}
+/*a
 {background-color: rgba(255,0,64,1);
    border: solid 2px rgba(0,0,0,1);
    -webkit-border-radius: 24px;
@@ -350,8 +381,36 @@ a
     
     
     
-    }
-.link{
+    }*/
+    a
+    {-moz-box-shadow:inset 0px 1px 0px 0px #f0a59e;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f0a59e;
+	box-shadow:inset 0px 1px 0px 0px #f0a59e;
+	background-color:#f0a59e;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #664c4a;}
+	.show
+	{
+	    
+	    color: #fff;
+background: #fff;
+text-shadow: 1px 1px 4px#000;
+	 }
+    /*{
+        
+        
+        
+        
    background-color: rgba(255,0,64,1);
    border: solid 2px rgba(0,0,0,1);
    -webkit-border-radius: 24px;
@@ -370,16 +429,38 @@ a
    line-height: 27px;
    text-indent: 29px;
    color: rgba(240,243,245,0.18);
-   text-shadow: 0px 1px 0px rgba(255,252,255,1)
+   text-shadow: 0px 1px 0px rgba(255,252,255,1)}*/
+.link{-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	border-bottom-color:#333;
+	border:1px solid #61c4ea;
+	background-color:#7cceee;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	color:#333;
+	font-family:'Verdana',Arial,sans-serif;
+	font-size:14px;
+	text-shadow:#b2e2f5 0 1px 0;
+	padding:5px
 }
 .nodeLevel1
-{
-    font: 14px Arial,Sans-Serif;
-    border: double 1px gray;
-    background: red url('../../Images/img01.jpg') repeat-x left top;
-    height: 25px;
-    width: 100px;
-    padding-left: 5px;
+{-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	border-bottom-color:#333;
+	border:1px solid #61c4ea;
+	background-color:#7cceee;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	color:#333;
+	font-family:'Verdana',Arial,sans-serif;
+	font-size:14px;
+	text-shadow:#b2e2f5 0 1px 0;
+	padding:5px
+}
 } 
 .nodeLevel2
 {
@@ -424,3 +505,4 @@ div.absecondary {
 div.Abfooter {
     clear: both;
 }
+/*Table in form View*/

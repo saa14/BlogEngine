@@ -4,7 +4,6 @@
         <siteMapNode url="addblog.aspx" title="Add Blog"  description="" />
 		<siteMapNode url="changeprofile.aspx" title="Change Profile"  description="" />
 		<siteMapNode url="changepwd.aspx" title="Change Password"  description="" />
-		<siteMapNode url="changephoto.aspx" title="Change Photo"  description="" />
-      <siteMapNode url="login.aspx" title="Go Back"> </siteMapNode>
+		<siteMapNode url="changephoto.aspx" title="Upload Photo"  description="" />
     </siteMapNode>
 </siteMap>

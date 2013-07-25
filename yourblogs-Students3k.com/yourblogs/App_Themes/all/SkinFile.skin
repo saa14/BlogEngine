@@ -15,7 +15,7 @@ Default skin template. The following skins are provided as examples only.
 
 --%>
 
-<asp:GridView runat="server" CssClass="mGrid" GridLines="None"
+<asp:GridView runat="server" CssClass="mGrid" GridLines="None" RowStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" FooterStyle-HorizontalAlign="Center"
             PagerStyle-CssClass="pgr"
             AlternatingRowStyle-CssClass="alt">
 </asp:GridView>

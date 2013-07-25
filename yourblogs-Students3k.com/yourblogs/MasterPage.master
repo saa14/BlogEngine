@@ -23,27 +23,31 @@
 </head>
 <body>
     <form id="form1" runat="server">
-      <div style="width:100%;background-color:white">
-           <h1> Welcome :
-           <asp:Label ID="lblUser" runat="server" ForeColor="Red"></asp:Label></h1>
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <asp:LinkButton ID="lbLogout" runat="server" OnClick="lbLogout_Click" CausesValidation="False">LogOut</asp:LinkButton>
-       </div>
+      <div style="width:100%;">
+           <h1 CssClass="loginhead"> Welcome :<asp:Label ID="lblUser" runat="server" ForeColor="Red" ></asp:Label></h1></div>
+      <div align="center"> <asp:LinkButton ID="lbLogout" runat="server" OnClick="lbLogout_Click" CausesValidation="False">LogOut</asp:LinkButton></div>
         <table  width="100%" height="600px">
             <tr >
-                <td width="50%" valign="top" 
+                <td valign="top" align="left"> 
                     
                     
-                    style="text-align: justify; color: #FFFFFF; font-weight: bold; font-family: 'Adobe Gothic Std B'; font-size: larger;background-color:wheat; position: relative; float: none; display: inline-block; width: auto; height: auto; table-layout: auto;">
+                    
                     <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" 
-                        ImageSet="Arrows" Height="252px" Width="232px" >
+                        ImageSet="Arrows" Height="268px" Width="215px" 
+                         >
                         <ParentNodeStyle Font-Bold="False" />
+                           <LevelStyles> 
+        <asp:TreeNodeStyle CssClass="nodeLevel1" /> 
+         <asp:TreeNodeStyle CssClass="nodeLevel2" /> 
+        <asp:TreeNodeStyle CssClass="nodeLevel3" /> 
+               </LevelStyles> 
                
+               
+             
                         <HoverNodeStyle Font-Underline="False" />
-                        <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px"
-                            VerticalPadding="0px" />
+                        
                         <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
-                            NodeSpacing="0px" VerticalPadding="0px" />
+                            NodeSpacing="3px" VerticalPadding="3px" />
                     </asp:TreeView>
                 </td>
                 <td valign="top">

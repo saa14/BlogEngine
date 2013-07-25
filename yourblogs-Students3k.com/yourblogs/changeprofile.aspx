@@ -1,6 +1,6 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" Title="Untitled Page" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h2>
+   <div align="center"> <h2>
         Change Profile</h2>
     <p>
         <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="uid"
@@ -46,5 +46,6 @@
     <br />
     <br />
     <br />
+    </div>
 </asp:Content>
 

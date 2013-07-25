@@ -37,16 +37,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title>Untitled Page</title>
+    <style type="text/css">
+        .style1
+        {
+            width: 217px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div align="center">
         <asp:FormView ID="FormView1" runat="server" DataKeyNames="bid" DataSourceID="SqlDataSource1">
             <ItemTemplate>
                 <h2><%# Eval("title") %></h2>
                 <h4>Author : <%# Eval("fname")%>  Posted On : <%# Eval("postedon") %></h4>
                 
-                <%# Eval("text") %>
+                <span class="glow"><%# Eval("text") %></span>
             </ItemTemplate>
         </asp:FormView>
     
@@ -61,16 +67,16 @@
         <a href="../login.aspx">Go Back</a>
         <h4>
             Add Comment</h4>
-        <p>
-            <table>
+        <p align="center"  >
+            <table >
                 <tr>
-                    <td style="width: 135px">
+                    <td class="style1">
                         Email Address :</td>
                     <td style="width: 100px">
                         <asp:TextBox ID="txtEmail" runat="server" Width="280px"></asp:TextBox></td>
                 </tr>
                 <tr>
-                    <td style="width: 135px">
+                    <td class="style1">
                         Comment :
                     </td>
                     <td style="width: 100px">
@@ -78,10 +84,12 @@
                 </tr>
             </table>
         </p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" Text="Add Comment" /><br />
         <br />
         <asp:Label ID="lblMsg" runat="server"></asp:Label><br />
-        
+    
+    
     </form>
 </body>
 </html>

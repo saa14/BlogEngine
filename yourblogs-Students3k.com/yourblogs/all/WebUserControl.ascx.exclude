@@ -1,0 +1,13 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true"CodeFile="WebUserControl.ascx.cs" Inherits="WebUserControl" %>
+<P>
+<asp:HyperLink id="lnkLogin" runat="server" 
+   NavigateURL="~/login.aspx">Login</asp:HyperLink>
+&nbsp; |
+<asp:HyperLink id="lnkAddToCart" runat="server" 
+   NavigateURL="Cart.aspx">Add to Cart</asp:HyperLink>
+&nbsp; |
+<asp:HyperLink id="lnkTechSupport" runat="server"
+   NavigateURL="TechSupport.aspx">Technical Support</asp:HyperLink>
+&nbsp; |
+<asp:HyperLink id="lnkAbout" runat="server" 
+   NavigateURL="~/About.aspx">About Us</asp:HyperLink></P>

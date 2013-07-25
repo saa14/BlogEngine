@@ -23,11 +23,16 @@
             // send mail
             MailMessage msg = new MailMessage();
             msg.To.Add( new MailAddress(txtEmail.Text));
-            msg.From = new MailAddress("admin@classroom.com");
+            msg.From = new MailAddress("debatearenacentral@gmail.com");
             msg.Subject = "Password Recovery";
             msg.IsBodyHtml = true;
             msg.Body = "Dear User, <p/>Use following password to login.<p/>Password :  " + pwd.ToString() + "<p/>Webmaster<br/>yourblogs.com";
-            SmtpClient server  = new SmtpClient("localhost");
+            SmtpClient server  = new SmtpClient();
+            server.Host = "smtp.gmail.com";
+            server.Port = 587;
+            server.UseDefaultCredentials = false;
+            server.Credentials = new System.Net.NetworkCredential("debatearenacentral@gmail.com", "ahuja123");
+            server.EnableSsl = true;
             server.Send(msg);
             lblMsg.Text = "Your password is sent to your email. Use it to login!<p><a href=../login.aspx>Login</a>";
         }
@@ -51,16 +56,24 @@
     <div>
         <h2>
             Password Recovery</h2>
-        <p>
-            Enter your email address :
-            <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox></p>
-        <p>
+        <p align="center">Enter your email address :<br /></p>
+            <div  style="text-align: center; height: 54px;" align="center"><asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+              
+                &nbsp;
+              
+                <br />
+&nbsp;
+              
+        </div>
+        <p >
             <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" />
         </p>
         <p>
-            <asp:Label ID="lblMsg" runat="server"></asp:Label>&nbsp;</p>
-    
+            <asp:Label ID="lblMsg" runat="server"></asp:Label></p>
+     
     </div>
+  
+
     </form>
 </body>
 </html>

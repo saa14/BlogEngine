@@ -12,7 +12,7 @@ public partial class register : System.Web.UI.Page
     SqlCommand cmd;
 
     protected void Page_Load(object sender, EventArgs e)
-    {
+    {       
 
     }
      protected void bt_register_click(object sender, EventArgs e)
@@ -33,26 +33,26 @@ public partial class register : System.Web.UI.Page
             command += "'" + tb_location.Text + "', ";
             command += "'" + tb_occupation.Text + "', ";
             command += "'" + tb_username.Text + "', ";
-            try
+          /*  try
             {
                 if (fileuploader_photo.HasFile)
                 {
-                    String filename = Request.MapPath("photos/" + Session["uid"].ToString() + ".jpg");
+                    String filename = Request.MapPath("../photos/" + Session["uid"].ToString() + ".jpg");
                     fileuploader_photo.SaveAs(filename);
                     hasPhoto = true;
                 }
-                else
-                    throw new Exception("No PHOTO");
+                //else
+                   // throw new Exception("NO PHOTO");
             }
             catch (Exception ex1)
             {
                 throw ex1;
             }
-
+            */
             if (hasPhoto)
-                command += "'y' ) ";
+                command += "'y' ); ";
             else
-                command += "'n' ) ";
+                command += "'n' ); ";
             
             con.Open();
             cmd = new SqlCommand(command, con);
@@ -61,7 +61,7 @@ public partial class register : System.Web.UI.Page
                 Response.Redirect("../login.aspx");
             }
             else
-                throw new Exception("An Exception Occurred");
+                throw new Exception("aaaaaaaaaaaaaaaaaaaaaa");
 
         }
         catch (SqlException ex2)

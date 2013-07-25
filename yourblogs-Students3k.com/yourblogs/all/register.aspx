@@ -82,18 +82,9 @@
                 </td>
             </tr>
             <tr>
-                <td >
-
-                </td>
+  
             </tr>
-            <tr>
-                <td >
-                    Photo</td>
-                <td>
-                    <asp:FileUpload ID="fileuploader_photo" runat="server" />
-                </td>
-            </tr>
-            <tr>
+            
                 <td >
          Location</td>
          <td>
@@ -114,7 +105,7 @@
             
             </tr>
             <tr>
-                <td  colspan="2">
+                <td  colspan="2" align="center">
                     <asp:Label ID="lb_error" runat="server"></asp:Label>
                     <asp:ValidationSummary ID="ValidationSummary1" runat="server" 
                         ValidationGroup="reg" />
